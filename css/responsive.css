@@ -1,0 +1,279 @@
+/* ==========================================================================
+   NovaPulse AI - Responsive Breakpoint Refinements
+   Ensuring 100% Mobile & Desktop Usability
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Medium Screens / Tablets (max-width: 1024px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  :root {
+    --nav-height: 68px;
+  }
+
+  .nav-links {
+    gap: 1.25rem;
+  }
+
+  .hero {
+    padding: 3.5rem 0 4rem;
+  }
+
+  .pipeline-track {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .pipeline-connector {
+    width: 2px;
+    height: 20px;
+  }
+
+  .pipeline-connector::after {
+    top: 0;
+    left: -3px;
+    animation: move-dot-vertical 2.2s infinite linear;
+  }
+
+  @keyframes move-dot-vertical {
+    0% { top: 0%; opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { top: 100%; opacity: 0; }
+  }
+
+  .pricing-cards-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Small Tablets & Large Phones (max-width: 768px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .nav-container {
+    width: 100%;
+  }
+
+  .nav-actions {
+    gap: 0.5rem;
+  }
+
+  .section {
+    padding: 4.5rem 0;
+  }
+
+  .nav-links,
+  .nav-actions .btn {
+    display: none;
+  }
+
+  .mobile-toggle {
+    display: flex;
+    flex-shrink: 0;
+  }
+
+  .hero-badge {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.75rem;
+    white-space: normal;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 8.5vw, 2.75rem);
+    word-break: break-word;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-cta-group .btn {
+    width: 100%;
+  }
+
+  .hero-guarantee {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  /* Dashboard Mockup Mobile Optimizations */
+  .hero-dashboard-mockup {
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .mockup-chrome {
+    padding: 0.65rem 0.85rem;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .chrome-title {
+    font-size: 0.72rem;
+    max-width: 180px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .chrome-status {
+    font-size: 0.68rem;
+    padding: 0.15rem 0.45rem;
+  }
+
+  .dashboard-body {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .workflow-canvas {
+    padding: 1rem;
+    min-height: auto;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .canvas-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.65rem;
+  }
+
+  .canvas-title {
+    font-size: 0.8rem;
+  }
+
+  .pipeline-track {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .pipeline-node {
+    width: 100%;
+    padding: 0.65rem 0.75rem;
+  }
+
+  .pipeline-connector {
+    width: 2px;
+    height: 14px;
+    margin: 0 auto;
+  }
+
+  .simulated-console {
+    font-size: 0.65rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+  }
+
+  .console-text {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  #consoleStatusText {
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  .how-it-works-preview {
+    min-height: auto;
+    padding: 1.5rem;
+  }
+
+  .roi-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .roi-results-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-card.popular {
+    transform: none;
+  }
+
+  .pricing-card.popular:hover {
+    transform: translateY(-4px);
+  }
+
+  .form-card {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .toast-container {
+    bottom: 1rem;
+    right: 1rem;
+    left: 1rem;
+  }
+
+  .toast-message {
+    max-width: 100%;
+  }
+
+  .back-to-top {
+    bottom: 1.25rem;
+    left: 1.25rem;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Small Mobile Devices (max-width: 480px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .section {
+    padding: 3.5rem 0;
+  }
+
+  .section-title {
+    font-size: 1.85rem;
+  }
+
+  .announcement-bar {
+    font-size: 0.78rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .announcement-badge {
+    display: none;
+  }
+
+  .step-item {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.25rem;
+  }
+
+  .modal-dialog {
+    padding: 1.5rem 1.2rem;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .newsletter-input {
+    width: 100%;
+  }
+
+  .newsletter-form .btn {
+    width: 100%;
+  }
+}

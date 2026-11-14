@@ -1,0 +1,13 @@
+# Dependencies & Cache
+node_modules/
+.npm/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Temporary files
+tmp/
+temp/

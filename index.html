@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NovaPulse AI | Autonomous Workflow & Intelligence Platform</title>
+  <meta name="description" content="Empower your product, engineering, and ops teams with autonomous AI agents. Connect 100+ tools, automate complex workflows, and scale 10x faster.">
+
+  <!-- Favicon SVG Data URI -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%236366F1'><path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg>">
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       1. Top Announcement Bar
+       ========================================================================= -->
+  <aside class="announcement-bar" role="complementary" aria-label="Announcement">
+    <span class="announcement-badge">New Release</span>
+    <span>Introducing <strong>NovaPulse 3.0</strong>: Autonomous multi-agent swarms with enterprise guardrails.</span>
+    <a href="#how-it-works" class="announcement-link">
+      See how it works
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </aside>
+
+  <!-- =========================================================================
+       2. Sticky Navigation Bar
+       ========================================================================= -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <!-- Brand Logo -->
+      <a href="#" class="brand" aria-label="NovaPulse AI Home">
+        <div class="brand-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+            <polyline points="2 17 12 22 22 17"></polyline>
+            <polyline points="2 12 12 17 22 12"></polyline>
+          </svg>
+        </div>
+        <span>NovaPulse<span class="brand-badge">AI</span></span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#how-it-works" class="nav-link">How It Works</a>
+        <a href="#roi-calculator" class="nav-link">ROI Calculator</a>
+        <a href="#pricing" class="nav-link">Pricing</a>
+        <a href="#testimonials" class="nav-link">Customers</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <!-- Theme Switcher -->
+        <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Toggle Dark / Light Theme" title="Toggle Theme">
+          <svg class="sun-icon" style="display:none;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+
+        <button class="btn btn-outline btn-sm open-modal-btn" data-modal-target="demoModal" data-tab="signup">Sign In</button>
+        <button class="btn btn-primary btn-sm btn-glow open-modal-btn" data-modal-target="demoModal" data-tab="demo">
+          Request Demo
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobileMenuBtn" class="mobile-toggle" aria-label="Open mobile navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer & Backdrop -->
+  <div id="mobileDrawerOverlay" class="mobile-drawer-overlay"></div>
+  <aside id="mobileNavDrawer" class="mobile-nav-drawer" aria-label="Mobile Navigation Drawer">
+    <div class="mobile-nav-links">
+      <a href="#features" class="mobile-nav-link">Features <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></a>
+      <a href="#how-it-works" class="mobile-nav-link">How It Works <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></a>
+      <a href="#roi-calculator" class="mobile-nav-link">ROI Calculator <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></a>
+      <a href="#pricing" class="mobile-nav-link">Pricing <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></a>
+      <a href="#testimonials" class="mobile-nav-link">Customers <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></a>
+      <a href="#faq" class="mobile-nav-link">FAQ <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></a>
+      <a href="#contact" class="mobile-nav-link">Contact Us <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></a>
+    </div>
+
+    <div class="mobile-nav-actions">
+      <button class="btn btn-primary btn-full open-modal-btn" data-modal-target="demoModal" data-tab="demo">Request Live Demo</button>
+      <button class="btn btn-secondary btn-full open-modal-btn" data-modal-target="demoModal" data-tab="signup">Start Free Trial</button>
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       3. Hero Section
+       ========================================================================= -->
+  <main>
+    <section class="hero" id="hero">
+      <div class="container">
+        <div class="hero-content">
+          <!-- Badge -->
+          <div class="hero-badge">
+            <span class="hero-badge-dot"></span>
+            <span>Next-Gen Autonomous Agent Orchestration • SOC-2 Type II</span>
+          </div>
+
+          <!-- Headline -->
+          <h1 class="hero-title">
+            Automate Complex Workflows with <span class="gradient-text">Autonomous AI Intelligence</span>
+          </h1>
+
+          <!-- Description -->
+          <p class="hero-description">
+            Empower your product, engineering, and operations teams with self-governing AI agent swarms. Connect 100+ enterprise data sources, automate multi-step operations, and accelerate throughput by 10x.
+          </p>
+
+          <!-- CTA Buttons -->
+          <div class="hero-cta-group">
+            <a href="#pricing" class="btn btn-primary btn-lg btn-glow">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg>
+              Start Free 14-Day Trial
+            </a>
+            <button class="btn btn-secondary btn-lg open-modal-btn" data-modal-target="demoModal" data-tab="demo">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+              Watch 2-Min Interactive Demo
+            </button>
+          </div>
+
+          <!-- Micro-copy Guarantees -->
+          <div class="hero-guarantee">
+            <div class="hero-guarantee-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              No credit card required
+            </div>
+            <div class="hero-guarantee-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              2-minute instant deployment
+            </div>
+            <div class="hero-guarantee-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Enterprise-grade AES-256 security
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Mockup: Interactive SaaS Dashboard -->
+        <div class="hero-visual-wrapper">
+          <div class="hero-visual-glow"></div>
+          <div class="hero-dashboard-mockup">
+            <!-- Window Chrome -->
+            <div class="mockup-chrome">
+              <div class="chrome-dots">
+                <span class="chrome-dot dot-red"></span>
+                <span class="chrome-dot dot-yellow"></span>
+                <span class="chrome-dot dot-green"></span>
+              </div>
+              <div class="chrome-title">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+                novapulse-orchestrator.prod.internal
+              </div>
+              <div class="chrome-status">
+                <span class="hero-badge-dot" style="width:6px;height:6px;"></span>
+                <span>All Systems Operational</span>
+              </div>
+            </div>
+
+            <!-- Dashboard Content -->
+            <div class="dashboard-body">
+              <!-- Left Column: Real-time Metric Cards -->
+              <div class="metrics-column">
+                <div class="metric-card">
+                  <div class="metric-header">
+                    <span class="metric-title">Agent Throughput</span>
+                    <span class="metric-pill pill-green">+38.4%</span>
+                  </div>
+                  <div class="metric-value" id="metricThroughput">1,482 <span style="font-size:0.8rem;color:var(--text-muted);font-weight:400;">ops/sec</span></div>
+                  <div class="metric-sub">Across 6 active agent clusters</div>
+                </div>
+
+                <div class="metric-card">
+                  <div class="metric-header">
+                    <span class="metric-title">Pipeline Latency</span>
+                    <span class="metric-pill pill-purple">18.2 ms</span>
+                  </div>
+                  <div class="metric-value">99.98%</div>
+                  <div class="metric-sub">Zero degraded services</div>
+                </div>
+
+                <div class="metric-card">
+                  <div class="metric-header">
+                    <span class="metric-title">Monthly Time Saved</span>
+                    <span class="metric-pill pill-green">Top Tier</span>
+                  </div>
+                  <div class="metric-value" id="metricTimeSaved">4,120 <span style="font-size:0.8rem;color:var(--text-muted);font-weight:400;">hours</span></div>
+                  <div class="metric-sub">Est. $310,000+ engineering value</div>
+                </div>
+              </div>
+
+              <!-- Right Column: Interactive Visual Workflow Canvas -->
+              <div class="workflow-canvas">
+                <div class="canvas-header">
+                  <div class="canvas-title">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                    Live Workflow: Autonomous Incident Triaging & Remediation
+                  </div>
+                  <button id="simulateWorkflowBtn" class="canvas-control-btn">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                    Run Simulation
+                  </button>
+                </div>
+
+                <!-- Animated Node Track -->
+                <div class="pipeline-track" id="pipelineTrack">
+                  <!-- Node 1 -->
+                  <div class="pipeline-node active" id="node1">
+                    <div class="node-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                    </div>
+                    <div class="node-info">
+                      <div class="node-label">Data Ingest</div>
+                      <div class="node-detail">Webhook & Logs</div>
+                    </div>
+                  </div>
+
+                  <div class="pipeline-connector"></div>
+
+                  <!-- Node 2 -->
+                  <div class="pipeline-node" id="node2">
+                    <div class="node-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                    </div>
+                    <div class="node-info">
+                      <div class="node-label">AI Reasoning</div>
+                      <div class="node-detail">Swarms & RAG</div>
+                    </div>
+                  </div>
+
+                  <div class="pipeline-connector"></div>
+
+                  <!-- Node 3 -->
+                  <div class="pipeline-node" id="node3">
+                    <div class="node-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                    </div>
+                    <div class="node-info">
+                      <div class="node-label">Action Dispatch</div>
+                      <div class="node-detail">GitHub PR & Slack</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Simulated Live Console Status -->
+                <div class="simulated-console">
+                  <div class="console-text">
+                    <span class="console-prefix">[AGENT-04]</span>
+                    <span id="consoleStatusText">Anomaly classified in payment microservice. Auto-generating hotfix patch...</span>
+                  </div>
+                  <span style="color:var(--accent-success);font-weight:700;">LIVE</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         4. Social Proof & Brand Logos Bar
+         ========================================================================= -->
+    <section class="social-proof-bar" aria-label="Trusted Enterprise Customers">
+      <div class="container">
+        <p class="social-proof-title">Trusted by engineering & product teams at high-growth innovators</p>
+        <div class="logos-grid">
+          <div class="logo-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/></svg>
+            <span>TECHFLOW</span>
+          </div>
+          <div class="logo-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+            <span>CLOUDVECT</span>
+          </div>
+          <div class="logo-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg>
+            <span>NEXUS DATA</span>
+          </div>
+          <div class="logo-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg>
+            <span>PULSELINE</span>
+          </div>
+          <div class="logo-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            <span>HYPERSCALE</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         5. Features Section
+         ========================================================================= -->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Core Features</span>
+          <h2 class="section-title">Everything You Need to Run <span class="gradient-text">Autonomous Workflows</span></h2>
+          <p class="section-subtitle">NovaPulse AI merges state-of-the-art LLM agents with robust orchestration infrastructure, giving you total observability and granular controls.</p>
+        </div>
+
+        <div class="features-grid">
+          <!-- Feature Card 1 -->
+          <article class="feature-card">
+            <div class="feature-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M3 12h3M18 12h3M12 3v3M12 18v3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg>
+            </div>
+            <h3 class="feature-title">Autonomous Multi-Agent Swarms</h3>
+            <p class="feature-desc">Decompose large, complex initiatives into parallel subtasks handled by specialized AI agents that review, cross-verify, and optimize each other's output.</p>
+            <div class="feature-tags">
+              <span class="feature-tag-item">Self-Coordinating</span>
+              <span class="feature-tag-item">Parallel Tasks</span>
+            </div>
+          </article>
+
+          <!-- Feature Card 2 -->
+          <article class="feature-card">
+            <div class="feature-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+            </div>
+            <h3 class="feature-title">100+ Enterprise Connectors</h3>
+            <p class="feature-desc">Instantly sync with Slack, GitHub, Jira, PostgreSQL, Snowflake, AWS, and Notion with OAuth2 security and zero boilerplate webhook configurations.</p>
+            <div class="feature-tags">
+              <span class="feature-tag-item">Instant OAuth</span>
+              <span class="feature-tag-item">Bi-directional Sync</span>
+            </div>
+          </article>
+
+          <!-- Feature Card 3 -->
+          <article class="feature-card">
+            <div class="feature-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 class="feature-title">Enterprise Security & Guardrails</h3>
+            <p class="feature-desc">SOC-2 Type II certified with end-to-end encryption at rest (AES-256) and in transit. Your corporate data is never used to train foundational AI models.</p>
+            <div class="feature-tags">
+              <span class="feature-tag-item">SOC-2 Type II</span>
+              <span class="feature-tag-item">Zero Training Policy</span>
+            </div>
+          </article>
+
+          <!-- Feature Card 4 -->
+          <article class="feature-card">
+            <div class="feature-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <h3 class="feature-title">Real-Time Predictive Analytics</h3>
+            <p class="feature-desc">Stream telemetry data directly into predictive models that flag system anomalies, forecast pipeline bottlenecks, and suggest auto-tuning opportunities.</p>
+            <div class="feature-tags">
+              <span class="feature-tag-item">&lt; 20ms Latency</span>
+              <span class="feature-tag-item">Anomaly Alerts</span>
+            </div>
+          </article>
+
+          <!-- Feature Card 5 -->
+          <article class="feature-card">
+            <div class="feature-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <h3 class="feature-title">Natural Language Workflow Builder</h3>
+            <p class="feature-desc">Describe your operational goals in plain English. NovaPulse constructs branching DAG workflows, handles error fallbacks, and executes safely.</p>
+            <div class="feature-tags">
+              <span class="feature-tag-item">No-Code / Low-Code</span>
+              <span class="feature-tag-item">Auto-DAG</span>
+            </div>
+          </article>
+
+          <!-- Feature Card 6 -->
+          <article class="feature-card">
+            <div class="feature-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+            </div>
+            <h3 class="feature-title">Human-in-the-Loop Governance</h3>
+            <p class="feature-desc">Configure sensitive thresholds where agent decisions require one-click human approval via Slack, email, or web before critical changes are committed.</p>
+            <div class="feature-tags">
+              <span class="feature-tag-item">Audit Trails</span>
+              <span class="feature-tag-item">Role Approvals</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         6. About / How It Works Section
+         ========================================================================= -->
+    <section class="section" id="how-it-works" style="background:var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">How It Works</span>
+          <h2 class="section-title">From Setup to Production in <span class="gradient-text">Three Simple Steps</span></h2>
+          <p class="section-subtitle">No long consulting projects or brittle scripts. Start automating high-impact workflows in minutes with guided setup.</p>
+        </div>
+
+        <div class="how-it-works-wrapper">
+          <!-- Left: Interactive Step Selector -->
+          <div class="steps-list" role="tablist">
+            <div class="step-item active" data-step="1" role="tab" tabindex="0">
+              <div class="step-number">01</div>
+              <div class="step-content">
+                <h3>Connect Your Data & Tools</h3>
+                <p>Authorize your existing stack with one-click connectors. NovaPulse maps your schemas, indexes knowledge bases, and binds securely without data replication.</p>
+              </div>
+            </div>
+
+            <div class="step-item" data-step="2" role="tab" tabindex="0">
+              <div class="step-number">02</div>
+              <div class="step-content">
+                <h3>Define AI Playbooks & Guardrails</h3>
+                <p>Specify task goals using our prompt studio or visual canvas. Set strict permission boundaries, approval policies, and rate limits.</p>
+              </div>
+            </div>
+
+            <div class="step-item" data-step="3" role="tab" tabindex="0">
+              <div class="step-number">03</div>
+              <div class="step-content">
+                <h3>Deploy, Monitor & Scale</h3>
+                <p>Activate autonomous swarms with continuous telemetry. Review full execution traces, inspect reasoning steps, and scale seamlessly.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Dynamic Visual Panel -->
+          <div class="how-it-works-preview">
+            <!-- Step 1 Card -->
+            <div class="preview-step-card active" id="stepCard1">
+              <span class="section-tag">Step 01 Preview</span>
+              <h3 style="font-size:1.25rem;margin-bottom:0.5rem;font-weight:700;">Instant Integration Hub</h3>
+              <p style="color:var(--text-secondary);font-size:0.9rem;">Pre-authenticated enterprise connectors ready to ingest:</p>
+              
+              <div class="step-visual-mockup">
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;padding-bottom:0.75rem;border-bottom:1px solid var(--border-subtle);">
+                  <div style="display:flex;align-items:center;gap:0.5rem;font-weight:600;font-size:0.9rem;">
+                    <span style="color:var(--accent-success);">●</span> PostgreSQL Production DB
+                  </div>
+                  <span style="font-size:0.75rem;background:rgba(16,185,129,0.15);color:var(--accent-success);padding:0.2rem 0.5rem;border-radius:4px;">Connected</span>
+                </div>
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;padding-bottom:0.75rem;border-bottom:1px solid var(--border-subtle);">
+                  <div style="display:flex;align-items:center;gap:0.5rem;font-weight:600;font-size:0.9rem;">
+                    <span style="color:var(--accent-success);">●</span> GitHub Organization
+                  </div>
+                  <span style="font-size:0.75rem;background:rgba(16,185,129,0.15);color:var(--accent-success);padding:0.2rem 0.5rem;border-radius:4px;">Webhook Active</span>
+                </div>
+                <div style="display:flex;align-items:center;justify-content:space-between;">
+                  <div style="display:flex;align-items:center;gap:0.5rem;font-weight:600;font-size:0.9rem;">
+                    <span style="color:var(--accent-success);">●</span> Slack Workspaces
+                  </div>
+                  <span style="font-size:0.75rem;background:rgba(16,185,129,0.15);color:var(--accent-success);padding:0.2rem 0.5rem;border-radius:4px;">Bot Ready</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2 Card -->
+            <div class="preview-step-card" id="stepCard2">
+              <span class="section-tag">Step 02 Preview</span>
+              <h3 style="font-size:1.25rem;margin-bottom:0.5rem;font-weight:700;">Prompt Studio & Policy Engine</h3>
+              <p style="color:var(--text-secondary);font-size:0.9rem;">Fine-tuned agent guidelines configured in real-time:</p>
+
+              <div class="step-visual-mockup">
+                <div style="font-family:var(--font-mono);font-size:0.8rem;background:var(--bg-primary);padding:1rem;border-radius:6px;color:var(--text-secondary);line-height:1.6;">
+                  <span style="color:var(--accent-primary);">role:</span> "Senior Site Reliability Agent"<br>
+                  <span style="color:var(--accent-primary);">rule:</span> "Auto-resolve DB pool exhaustion if p99 &lt; 50ms"<br>
+                  <span style="color:var(--accent-primary);">guardrail:</span> "Require human confirmation for prod rollbacks"<br>
+                  <span style="color:var(--accent-success);font-weight:700;">✓ Guardrails passed unit verification</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3 Card -->
+            <div class="preview-step-card" id="stepCard3">
+              <span class="section-tag">Step 03 Preview</span>
+              <h3 style="font-size:1.25rem;margin-bottom:0.5rem;font-weight:700;">Telemetry & Autonomous Scale</h3>
+              <p style="color:var(--text-secondary);font-size:0.9rem;">Live operational feedback streaming directly to your team:</p>
+
+              <div class="step-visual-mockup">
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.75rem;">
+                  <span style="font-size:0.85rem;color:var(--text-secondary);">Execution Reliability:</span>
+                  <span style="font-weight:700;color:var(--accent-success);">99.98%</span>
+                </div>
+                <div style="width:100%;background:rgba(255,255,255,0.08);height:8px;border-radius:4px;overflow:hidden;margin-bottom:1.25rem;">
+                  <div style="width:99.98%;background:var(--accent-success);height:100%;"></div>
+                </div>
+                <div style="display:flex;justify-content:space-between;font-size:0.8rem;color:var(--text-muted);">
+                  <span>Daily Events: <strong>1.2M+</strong></span>
+                  <span>Avg MTTR: <strong>&lt; 90 seconds</strong></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         7. Interactive ROI Calculator
+         ========================================================================= -->
+    <section class="section" id="roi-calculator">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Value Assessment</span>
+          <h2 class="section-title">Calculate Your Team's <span class="gradient-text">Estimated ROI</span></h2>
+          <p class="section-subtitle">See how many hours and dollars NovaPulse AI saves your organization every month based on your team size.</p>
+        </div>
+
+        <div class="roi-card">
+          <!-- Controls -->
+          <div class="roi-controls">
+            <h3 style="font-size:1.35rem;font-weight:700;margin-bottom:0.5rem;">Interactive ROI Estimator</h3>
+            <p style="color:var(--text-secondary);font-size:0.925rem;">Drag the slider to adjust your engineering, ops, or product team headcount:</p>
+
+            <div class="slider-group">
+              <div class="slider-label-row">
+                <span class="slider-label">Team Members:</span>
+                <span class="slider-value-badge" id="teamSizeDisplay">25 People</span>
+              </div>
+              <input type="range" id="teamSizeSlider" class="custom-range-slider" min="5" max="250" value="25" step="5" aria-label="Team Size Range Slider">
+            </div>
+
+            <p style="font-size:0.825rem;color:var(--text-muted);">*Calculations based on average 16 hours saved per engineer/month at standard industry rates.</p>
+          </div>
+
+          <!-- Live Dynamic Results -->
+          <div class="roi-results-grid">
+            <div class="roi-result-item">
+              <span class="roi-result-label">Hours Saved / Month</span>
+              <span class="roi-result-value" id="calcHoursSaved">400 hrs</span>
+            </div>
+            <div class="roi-result-item">
+              <span class="roi-result-label">Annual Cost Savings</span>
+              <span class="roi-result-value" id="calcAnnualSavings">$384,000</span>
+            </div>
+            <div class="roi-result-item">
+              <span class="roi-result-label">Efficiency Boost</span>
+              <span class="roi-result-value" style="color:var(--accent-primary);" id="calcEfficiency">4.8x</span>
+            </div>
+            <div class="roi-result-item">
+              <span class="roi-result-label">Payback Period</span>
+              <span class="roi-result-value" style="color:var(--accent-secondary);" id="calcPayback">&lt; 14 Days</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         8. Pricing Section
+         ========================================================================= -->
+    <section class="section" id="pricing" style="background:var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Predictable Plans</span>
+          <h2 class="section-title">Simple, Scalable Pricing for <span class="gradient-text">Every Ambition</span></h2>
+          <p class="section-subtitle">Start with our 14-day risk-free trial. Upgrade, downgrade, or cancel at any time with zero hassle.</p>
+        </div>
+
+        <!-- Billing Cycle Toggle Switch -->
+        <div class="pricing-toggle-wrapper">
+          <span class="pricing-toggle-label active" id="labelMonthly">Monthly Billing</span>
+          <div class="toggle-switch" id="pricingToggleSwitch" role="button" tabindex="0" aria-label="Toggle annual or monthly billing">
+            <div class="toggle-slider"></div>
+          </div>
+          <span class="pricing-toggle-label" id="labelAnnual">
+            Annual Billing
+            <span class="savings-pill">Save 20%</span>
+          </span>
+        </div>
+
+        <!-- Pricing Cards -->
+        <div class="pricing-cards-grid">
+          <!-- Plan 1: Starter -->
+          <article class="pricing-card">
+            <h3 class="pricing-plan-name">Starter</h3>
+            <p class="pricing-plan-desc">For fast-moving seed startups & agile squads kicking off workflow automation.</p>
+            <div class="pricing-price-box">
+              <span class="price-currency">$</span>
+              <span class="price-amount" data-monthly="29" data-annual="24">29</span>
+              <span class="price-period">/ user / mo</span>
+            </div>
+            <div class="pricing-divider"></div>
+            <ul class="pricing-features-list">
+              <li class="pricing-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Up to 3 Autonomous Agents
+              </li>
+              <li class="pricing-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                25,000 Workflow Events / mo
+              </li>
+              <li class="pricing-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                15 Prebuilt Connectors
+              </li>
+              <li class="pricing-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Standard Community Support
+              </li>
+            </ul>
+            <button class="btn btn-outline btn-full select-plan-btn" data-plan="Starter">Start 14-Day Free Trial</button>
+          </article>
+
+          <!-- Plan 2: Professional (Popular) -->
+          <article class="pricing-card popular">
+            <span class="popular-badge">Most Popular</span>
+            <h3 class="pricing-plan-name">Professional</h3>
+            <p class="pricing-plan-desc">For scaling teams that require multi-agent swarms, custom logic, and faster SLAs.</p>
+            <div class="pricing-price-box">
+              <span class="price-currency">$</span>
+              <span class="price-amount" data-monthly="79" data-annual="64">79</span>
+              <span class="price-period">/ user / mo</span>
+            </div>
+            <div class="pricing-divider"></div>
+            <ul class="pricing-features-list">
+              <li class="pricing-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Unlimited Autonomous Agent Swarms
+              </li>
+              <li class="pricing-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                250,000 Workflow Events / mo
+              </li>
+              <li class="pricing-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                All 100+ Enterprise Connectors
+              </li>
+              <li class="pricing-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Human-in-the-Loop Slack Approvals
+              </li>
+              <li class="pricing-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Priority 1-Hour SLA Support
+              </li>
+            </ul>
+            <button class="btn btn-primary btn-full btn-glow select-plan-btn" data-plan="Professional">Start Pro Trial</button>
+          </article>
+
+          <!-- Plan 3: Enterprise -->
+          <article class="pricing-card">
+            <h3 class="pricing-plan-name">Enterprise</h3>
+            <p class="pricing-plan-desc">For large organizations needing custom LLMs, dedicated VPC, SSO & compliance audits.</p>
+            <div class="pricing-price-box">
+              <span class="price-currency">$</span>
+              <span class="price-amount" data-monthly="199" data-annual="159">199</span>
+              <span class="price-period">/ user / mo</span>
+            </div>
+            <div class="pricing-divider"></div>
+            <ul class="pricing-features-list">
+              <li class="pricing-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Dedicated Private VPC Cluster
+              </li>
+              <li class="pricing-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Unlimited Events & Custom Fine-Tuning
+              </li>
+              <li class="pricing-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                SAML / Okta SSO & SCIM Provisioning
+              </li>
+              <li class="pricing-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Dedicated Solutions Architect & 24/7 SLA
+              </li>
+            </ul>
+            <button class="btn btn-outline btn-full select-plan-btn" data-plan="Enterprise">Contact Enterprise Sales</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         9. Testimonials & Social Proof
+         ========================================================================= -->
+    <section class="section" id="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Testimonials</span>
+          <h2 class="section-title">Loved by High-Impact <span class="gradient-text">Engineering Teams</span></h2>
+          <p class="section-subtitle">Read how market leaders use NovaPulse AI to automate mission-critical operations and free up thousands of engineering hours.</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <!-- Testimonial 1 -->
+          <article class="testimonial-card">
+            <div>
+              <div class="testimonial-rating" aria-label="5 out of 5 stars">
+                ★★★★★
+              </div>
+              <p class="testimonial-quote">
+                "NovaPulse AI reduced our MTTR for high-severity database incidents from 45 minutes to under 90 seconds. The autonomous agent swarms feel like hiring five senior infrastructure engineers on day one."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">SC</div>
+              <div class="author-info">
+                <h4>Sarah Chen</h4>
+                <p>VP of Infrastructure, CloudVect</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Testimonial 2 -->
+          <article class="testimonial-card">
+            <div>
+              <div class="testimonial-rating" aria-label="5 out of 5 stars">
+                ★★★★★
+              </div>
+              <p class="testimonial-quote">
+                "The natural language workflow builder paired with SOC-2 compliance gave our security team complete confidence. We automated our entire compliance audit process in two weeks."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">MR</div>
+              <div class="author-info">
+                <h4>Marcus Rivera</h4>
+                <p>Chief Technology Officer, Nexus Data</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Testimonial 3 -->
+          <article class="testimonial-card">
+            <div>
+              <div class="testimonial-rating" aria-label="5 out of 5 stars">
+                ★★★★★
+              </div>
+              <p class="testimonial-quote">
+                "We switched from a traditional RPA tool and our monthly infrastructure costs plummeted by 60%. The ROI calculator wasn’t an exaggeration—it paid for itself in the first 10 days."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">EL</div>
+              <div class="author-info">
+                <h4>Elena Lindqvist</h4>
+                <p>Director of Product Operations, Pulseline</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         10. FAQ Accordion Section
+         ========================================================================= -->
+    <section class="section" id="faq" style="background:var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Got Questions?</span>
+          <h2 class="section-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
+          <p class="section-subtitle">Everything you need to know about NovaPulse AI, onboarding, security, and billing.</p>
+        </div>
+
+        <div class="faq-accordion" id="faqAccordion">
+          <!-- FAQ 1 -->
+          <div class="faq-item open">
+            <button class="faq-question" aria-expanded="true">
+              <span>How fast can our team deploy NovaPulse AI in production?</span>
+              <div class="faq-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </div>
+            </button>
+            <div class="faq-answer">
+              <p>Most engineering teams deploy their first automated workflow within 15 minutes. With our one-click OAuth integrations and prebuilt templates, you don't need to write boilerplate API adapters or set up complex Kubernetes clusters.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Is our company data used to train AI models?</span>
+              <div class="faq-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </div>
+            </button>
+            <div class="faq-answer">
+              <p><strong>Absolutely not.</strong> We maintain a zero-data-retention guarantee for AI training. Your prompts, context, logs, and database records remain strictly isolated to your tenant, protected by AES-256 encryption at rest and TLS 1.3 in transit.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Can we retain human approval on sensitive actions?</span>
+              <div class="faq-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </div>
+            </button>
+            <div class="faq-answer">
+              <p>Yes! With our granular Human-in-the-Loop policies, any action marked as destructive or high-impact (like prod code merges, customer refunds, or database schema alterations) triggers an interactive approval message in your team's Slack or email.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>What happens after our 14-day free trial ends?</span>
+              <div class="faq-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </div>
+            </button>
+            <div class="faq-answer">
+              <p>No unexpected credit card charges! If you decide not to upgrade to a paid plan, your account transitions gracefully to our free community tier. All your workflows and historical configurations remain saved so you can resume whenever ready.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Can we connect custom internal APIs and on-prem databases?</span>
+              <div class="faq-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </div>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. In addition to our 100+ public connectors, NovaPulse supports OpenAPI / Swagger schema imports, private VPC peering, and secure self-hosted gateway runners for air-gapped on-premise environments.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         11. Contact / Demo Request Section
+         ========================================================================= -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-section-grid">
+          <!-- Left Info Column -->
+          <div class="contact-info-panel">
+            <span class="section-tag">Get in Touch</span>
+            <h2 class="section-title">Ready to Experience <span class="gradient-text">Autonomous Scale?</span></h2>
+            <p class="section-subtitle">Speak with our technical solutions architects or schedule a customized live walkthrough tailored to your infrastructure stack.</p>
+
+            <div class="contact-perks-list">
+              <div class="contact-perk-item">
+                <svg class="contact-perk-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <div>
+                  <strong>Live Architecture Review:</strong> We analyze your bottlenecks and map a sample agent workflow on the call.
+                </div>
+              </div>
+              <div class="contact-perk-item">
+                <svg class="contact-perk-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <div>
+                  <strong>Fast Technical Response:</strong> Enterprise demo requests are acknowledged in under 15 minutes.
+                </div>
+              </div>
+              <div class="contact-perk-item">
+                <svg class="contact-perk-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <div>
+                  <strong>Custom POC sandbox:</strong> Dedicated test environment with preloaded mock workloads.
+                </div>
+              </div>
+            </div>
+
+            <!-- Direct Contact Details -->
+            <div class="contact-details-box">
+              <div class="contact-detail-row">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <span>enterprise@novapulse.ai</span>
+              </div>
+              <div class="contact-detail-row">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <span>+1 (888) 540-PULSE (Direct line)</span>
+              </div>
+              <div class="contact-detail-row">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span>San Francisco, CA & Global Remote</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Validated Contact & Demo Form -->
+          <div class="form-card">
+            <h3 class="form-title">Request a Live Demonstration</h3>
+            <p class="form-desc">Fill out your details below and an AI Solutions Architect will prepare a tailored session.</p>
+
+            <!-- Success State Banner -->
+            <div id="contactSuccessBanner" class="form-success-banner" role="alert" aria-live="polite">
+              <div class="success-icon-badge">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <h4 style="font-size:1.15rem;font-weight:700;color:var(--accent-success);margin-bottom:0.4rem;">Demo Request Confirmed!</h4>
+              <p style="font-size:0.875rem;color:var(--text-secondary);margin-bottom:1rem;">Thank you! We've sent a calendar invite and sandbox credentials to your business email.</p>
+              <button id="resetContactFormBtn" class="btn btn-outline btn-sm">Submit Another Request</button>
+            </div>
+
+            <!-- Form -->
+            <form id="contactForm" novalidate>
+              <div class="form-grid two-col">
+                <div class="form-group">
+                  <label class="form-label" for="contactFullName">Full Name *</label>
+                  <input type="text" id="contactFullName" class="form-control" placeholder="Alex Morgan" required>
+                  <span class="field-error-msg">Please enter your full name (at least 2 characters).</span>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="contactEmail">Work Email *</label>
+                  <input type="email" id="contactEmail" class="form-control" placeholder="alex@company.com" required>
+                  <span class="field-error-msg">Please provide a valid work email address.</span>
+                </div>
+              </div>
+
+              <div class="form-grid two-col" style="margin-top:1.25rem;">
+                <div class="form-group">
+                  <label class="form-label" for="contactCompany">Company Name *</label>
+                  <input type="text" id="contactCompany" class="form-control" placeholder="Acme Technologies" required>
+                  <span class="field-error-msg">Company name is required.</span>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="contactTeamSize">Team Size *</label>
+                  <select id="contactTeamSize" class="form-control" required>
+                    <option value="">Select team size...</option>
+                    <option value="1-10">1 - 10 members</option>
+                    <option value="11-50">11 - 50 members</option>
+                    <option value="51-200">51 - 200 members</option>
+                    <option value="200+">200+ Enterprise members</option>
+                  </select>
+                  <span class="field-error-msg">Please select your team size.</span>
+                </div>
+              </div>
+
+              <div class="form-group" style="margin-top:1.25rem;">
+                <label class="form-label" for="contactUseCase">Primary Use Case *</label>
+                <select id="contactUseCase" class="form-control" required>
+                  <option value="">Select primary focus...</option>
+                  <option value="incident">Autonomous Incident Remediation & SRE</option>
+                  <option value="analytics">Predictive Analytics & Telemetry Modeling</option>
+                  <option value="engineering">Developer Workflow Automation & CI/CD</option>
+                  <option value="compliance">Security & SOC-2 Compliance Audit Automation</option>
+                  <option value="other">Custom Enterprise Multi-Agent Project</option>
+                </select>
+                <span class="field-error-msg">Please select your primary use case.</span>
+              </div>
+
+              <div class="form-group" style="margin-top:1.25rem;">
+                <label class="form-label" for="contactMessage">Specific Requirements or Questions</label>
+                <textarea id="contactMessage" class="form-control" rows="3" placeholder="Tell us about the systems you want to connect or specific goals..."></textarea>
+              </div>
+
+              <div class="form-checkbox-row">
+                <input type="checkbox" id="contactTerms" required>
+                <label for="contactTerms">I agree to NovaPulse's <a href="#" style="color:var(--accent-primary);text-decoration:underline;">Terms of Service</a> and <a href="#" style="color:var(--accent-primary);text-decoration:underline;">Privacy Policy</a>.</label>
+              </div>
+              <span id="termsErrorMsg" class="field-error-msg" style="margin-top:-0.5rem;margin-bottom:0.75rem;">You must accept the terms before proceeding.</span>
+
+              <button type="submit" id="contactSubmitBtn" class="btn btn-primary btn-full btn-lg btn-glow">
+                <span>Confirm & Request Demo</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       12. Footer
+       ========================================================================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand Column -->
+        <div class="footer-brand-col">
+          <a href="#" class="brand">
+            <div class="brand-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+            </div>
+            <span>NovaPulse<span class="brand-badge">AI</span></span>
+          </a>
+          <p>
+            The enterprise-grade autonomous workflow platform. Built to orchestrate multi-agent swarms with ironclad security and millimeter precision.
+          </p>
+
+          <!-- Newsletter Form with instant validation -->
+          <form id="newsletterForm" class="newsletter-form" novalidate>
+            <input type="email" id="newsletterEmail" class="newsletter-input" placeholder="Enter work email" required aria-label="Subscribe to newsletter">
+            <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+          </form>
+        </div>
+
+        <!-- Product Links -->
+        <div>
+          <h4 class="footer-col-title">Product</h4>
+          <ul class="footer-links-list">
+            <li><a href="#features">Multi-Agent Swarms</a></li>
+            <li><a href="#how-it-works">Connectors Hub</a></li>
+            <li><a href="#roi-calculator">ROI Estimator</a></li>
+            <li><a href="#pricing">Pricing Plans</a></li>
+            <li><a href="#features">Security & SOC-2</a></li>
+          </ul>
+        </div>
+
+        <!-- Resources Links -->
+        <div>
+          <h4 class="footer-col-title">Resources</h4>
+          <ul class="footer-links-list">
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">API Reference</a></li>
+            <li><a href="#">Workflow Templates</a></li>
+            <li><a href="#">System Status</a></li>
+            <li><a href="#">Changelog v3.0</a></li>
+          </ul>
+        </div>
+
+        <!-- Company Links -->
+        <div>
+          <h4 class="footer-col-title">Company</h4>
+          <ul class="footer-links-list">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers (We're Hiring!)</a></li>
+            <li><a href="#">Press Kit</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 NovaPulse AI, Inc. Built for <strong>Sankar Group Front-End Development Internship Assessment</strong>.
+        </div>
+
+        <!-- Social Media Icons -->
+        <div class="social-links" aria-label="Social media profiles">
+          <a href="#" class="social-link" aria-label="GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Twitter / X">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Discord">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12a2 2 0 1 0 4 0 2 2 0 1 0-4 0M16 12a2 2 0 1 0-4 0 2 2 0 1 0 4 0"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       13. Interactive Demo & Sign Up Modal
+       ========================================================================= -->
+  <div id="demoModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close dialog">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+
+      <div class="modal-tabs">
+        <button class="modal-tab-btn active" id="tabDemoBtn" data-target="modalDemoView">Book a Demo</button>
+        <button class="modal-tab-btn" id="tabSignupBtn" data-target="modalSignupView">Start Free Trial</button>
+      </div>
+
+      <!-- Demo View -->
+      <div id="modalDemoView" class="modal-view-panel">
+        <h3 id="modalTitle" style="font-size:1.35rem;font-weight:700;margin-bottom:0.4rem;">Schedule a 1-on-1 Walkthrough</h3>
+        <p style="color:var(--text-secondary);font-size:0.875rem;margin-bottom:1.5rem;">See NovaPulse in action on your specific data stack.</p>
+
+        <form id="modalDemoForm" novalidate>
+          <div class="form-group" style="margin-bottom:1rem;">
+            <label class="form-label" for="modalName">Your Name *</label>
+            <input type="text" id="modalName" class="form-control" placeholder="Jordan Lee" required>
+            <span class="field-error-msg">Please enter your name.</span>
+          </div>
+
+          <div class="form-group" style="margin-bottom:1rem;">
+            <label class="form-label" for="modalEmail">Work Email *</label>
+            <input type="email" id="modalEmail" class="form-control" placeholder="jordan@innovate.co" required>
+            <span class="field-error-msg">Please enter a valid work email.</span>
+          </div>
+
+          <div class="form-group" style="margin-bottom:1.25rem;">
+            <label class="form-label" for="modalPlanSelect">Interested Plan</label>
+            <select id="modalPlanSelect" class="form-control">
+              <option value="Professional">Professional Plan ($79/mo)</option>
+              <option value="Starter">Starter Plan ($29/mo)</option>
+              <option value="Enterprise">Enterprise Custom Plan</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full btn-glow">Confirm Demo Booking</button>
+        </form>
+      </div>
+
+      <!-- Sign Up View -->
+      <div id="modalSignupView" class="modal-view-panel" style="display:none;">
+        <h3 style="font-size:1.35rem;font-weight:700;margin-bottom:0.4rem;">Create Your Free Account</h3>
+        <p style="color:var(--text-secondary);font-size:0.875rem;margin-bottom:1.5rem;">Instant access to the 14-day full feature trial. No credit card required.</p>
+
+        <form id="modalSignupForm" novalidate>
+          <div class="form-group" style="margin-bottom:1rem;">
+            <label class="form-label" for="signupName">Full Name *</label>
+            <input type="text" id="signupName" class="form-control" placeholder="Jane Doe" required>
+            <span class="field-error-msg">Name is required.</span>
+          </div>
+
+          <div class="form-group" style="margin-bottom:1rem;">
+            <label class="form-label" for="signupEmail">Work Email *</label>
+            <input type="email" id="signupEmail" class="form-control" placeholder="jane@enterprise.com" required>
+            <span class="field-error-msg">Valid work email required.</span>
+          </div>
+
+          <div class="form-group" style="margin-bottom:1.25rem;">
+            <label class="form-label" for="signupPassword">Password *</label>
+            <input type="password" id="signupPassword" class="form-control" placeholder="••••••••" required minlength="8">
+            <span class="field-error-msg">Password must be at least 8 characters.</span>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full btn-glow">Get Started Free</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       14. Floating Back to Top Button
+       ========================================================================= -->
+  <button id="backToTopBtn" class="back-to-top" aria-label="Back to top" title="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- =========================================================================
+       15. Floating Toast Notification Container
+       ========================================================================= -->
+  <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <script src="js/pricing-toggle.js"></script>
+  <script src="js/form-validation.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

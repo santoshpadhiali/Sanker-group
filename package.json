@@ -1,0 +1,23 @@
+{
+  "name": "novapulse-ai-saas-landing-page",
+  "version": "1.0.0",
+  "description": "NovaPulse AI - Autonomous Workflow & Intelligence Platform | Sankar Group Front-End Internship Assignment",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve -l 3000 .",
+    "dev": "npx serve -l 3000 .",
+    "serve": "python -m http.server 3000"
+  },
+  "keywords": [
+    "saas",
+    "landing-page",
+    "frontend",
+    "responsive",
+    "html5",
+    "css3",
+    "javascript",
+    "sankar-group"
+  ],
+  "author": "Front-End Developer Intern Candidate",
+  "license": "MIT"
+}

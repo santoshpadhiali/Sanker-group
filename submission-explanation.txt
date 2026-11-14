@@ -1,0 +1,11 @@
+SANKAR GROUP FRONT-END DEVELOPMENT INTERNSHIP ASSIGNMENT
+Project: NovaPulse AI - Autonomous Workflow & Intelligence Platform
+Submission Explanation: Design Choices & Challenges Solved (5-8 Lines)
+--------------------------------------------------------------------------------
+1. Visual Hierarchy & Aesthetic: Designed a sleek, high-contrast dark-mode interface inspired by Linear and Vercel, combining deep navy slate backgrounds (#07090E) with electric indigo and magenta gradients to establish immediate enterprise credibility and highlight key conversion points.
+2. Zero-Dependency Vanilla Architecture: Implemented clean semantic HTML5, modern CSS3 design tokens (variables, flexbox, grid, glassmorphism), and decoupled ES6+ JavaScript modules without external framework overhead, ensuring instant zero-friction loading across any browser or local environment.
+3. Engaging Functional Interactions: Added meaningful micro-interactions including a live hero workflow simulation, an interactive team ROI calculator slider, dynamic monthly/annual pricing recalculation (-20%), and expandable FAQ accordions.
+4. Robust Client-Side Validation: Built complete form validation with real-time feedback, RFC-standard email regex, required field checks, simulated submission loading states, accessible success confirmation banners, and floating toast notifications.
+5. Responsive Mobile Challenge Solved: On narrow mobile viewports (<400px), button glow transforms and dashboard chrome elements initially triggered horizontal overflow; resolved this by re-architecting the glow effects with GPU-accelerated gradient masks and paint containment, wrapping announcement banners, and stacking pipeline nodes vertically with animated mobile connectors.
+--------------------------------------------------------------------------------
+Candidate Submission | Sankar Group - Built to Make History
