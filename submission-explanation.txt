@@ -9,3 +9,4 @@ Submission Explanation: Design Choices & Challenges Solved (5-8 Lines)
 5. Responsive Mobile Challenge Solved: On narrow mobile viewports (<400px), button glow transforms and dashboard chrome elements initially triggered horizontal overflow; resolved this by re-architecting the glow effects with GPU-accelerated gradient masks and paint containment, wrapping announcement banners, and stacking pipeline nodes vertically with animated mobile connectors.
 --------------------------------------------------------------------------------
 Candidate Submission | Sankar Group - Built to Make History
+
